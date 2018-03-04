@@ -28,6 +28,7 @@ for line in array:
     dt = datetime.strptime(cols[0], '%d %b %Y ')
     translated_line += dt.strftime("%d/%m/%Y")     # Date
     translated_line += ";;;;"
+    translated_line += cols[1]
     translated_line += ";"
     pattern = re.compile(r'\s+')
     cols[2] = re.sub(pattern, '', cols[2])
